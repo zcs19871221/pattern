@@ -58,6 +58,7 @@ class SizeDecorate extends Decorate {
     if (this.getSize() === 'VENTI') {
       return this.beverage.cost() + 0.3;
     }
+    throw new Error(this.getSize());
   }
 
   getDescription(): string {
