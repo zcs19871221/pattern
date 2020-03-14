@@ -104,7 +104,7 @@ class NavInterator implements Iter {
     if (this.hasNext()) {
       const component = this.stack[0].next();
       if (component instanceof Menu) {
-        this.stack.push(component.createIterator());
+        this.stack.unshift(component.createIterator());
       }
       return component;
     }
