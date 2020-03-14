@@ -85,7 +85,7 @@ class KfcMenu implements Menu {
     return new KfcIterator(this.menus);
   }
 }
-class NormalWaitTress {
+class Waitress {
   private kfc: KfcMenu;
   private burgerKing: BurgerKingMenu;
   constructor(kfc: KfcMenu, burgerKing: BurgerKingMenu) {
@@ -109,7 +109,7 @@ class NormalWaitTress {
 function main() {
   const kfc = new KfcMenu();
   const burgerKing = new BurgerKingMenu();
-  const waittress = new NormalWaitTress(kfc, burgerKing);
+  const waittress = new Waitress(kfc, burgerKing);
   waittress.print();
 }
 
