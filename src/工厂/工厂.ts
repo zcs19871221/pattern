@@ -113,4 +113,4 @@ function main() {
   bostonPizzaStore.order('beaf');
   bostonPizzaStore.order('beaf');
 }
-main();
+export default main;

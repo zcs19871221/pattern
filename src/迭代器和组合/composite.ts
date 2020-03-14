@@ -110,6 +110,17 @@ const main = () => {
   const kfc = new Menu('kfc', '肯德基是老牌快餐店');
   kfc.add(new MenuItem('原味鸡', '整只鸡炸,美味'));
   kfc.add(new MenuItem('新奥尔良烤鸡腿堡', '适合大众口味'));
-  const burder
-  const waittress = new WaitTress();
+  const panini = new Menu('kfc帕尼尼系列', '早餐汉堡');
+  panini.add(new MenuItem('帕尼尼猪柳蛋', '猪肉加煎蛋'));
+  panini.add(new MenuItem('帕尼尼培根蛋', '培根加煎蛋'));
+  kfc.add(panini);
+  const burgerKing = new Menu('burgerking', 'Burgerking现烤汉堡');
+  burgerKing.add(new MenuItem('天椒皇堡', '辣味'));
+  burgerKing.add(new MenuItem('果木鸡腿堡', '不辣'));
+  const allMenus = new Menu('所有菜单', '');
+  allMenus.add(kfc);
+  allMenus.add(burgerKing);
+  const waittress = new WaitTress(allMenus);
+  waittress.printMenu();
 };
+main();
