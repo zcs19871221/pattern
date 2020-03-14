@@ -114,4 +114,3 @@ function main() {
   bostonPizzaStore.order('beaf');
 }
 main();
-export default main;
